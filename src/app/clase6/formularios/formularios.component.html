@@ -1,0 +1,12 @@
+<div class="m-a">
+    <form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+        Nombre: <input type="text" formControlName="nombre" required>
+        Edad: <input type="text" formControlName="edad">
+        Genero: <input type="text" formControlName="genero">
+      <button type="submit">Confirmar</button>
+    </form>
+    <br>
+    {{formularioPrincipal.valid ? 'Valido' : 'Invalido'}}
+    <br>
+    {{formularioPrincipal.get('nombre')?.value|  json}}
+</div>
